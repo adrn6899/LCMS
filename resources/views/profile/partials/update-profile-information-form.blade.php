@@ -17,12 +17,32 @@
         @csrf
         @method('patch')
 
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+        <div class="flex">
+            <div class="inline-flex w-1/2 mr-4 relative">
+              <x-input-label for="FirstName" :value="__('FirstName')" class="absolute top-0 left-0 text-gray-500 font-medium" style="transform: translateY(-50%)" />
+              <x-text-input id="FirstName" name="first_name" type="text" class="mt-4 block w-full" :value="old('FirstName', $user->first_name)" required autofocus />
+              <x-input-error class="mt-2" :messages="$errors->get('FirstName')" />
+            </div>
+            <div class="inline-flex w-1/2 relative">
+              <x-input-label for="LastName" :value="__('LastName')" class="absolute top-0 left-0 text-gray-500 font-medium" style="transform: translateY(-50%)" />
+              <x-text-input id="LastName" name="last_name" type="text" class="mt-4 block w-full" :value="old('LastName', $user->last_name)" required autofocus />
+              <x-input-error class="mt-2" :messages="$errors->get('LastName')" />
+            </div>
         </div>
 
+        {{-- <div class="flex">
+            <div class="inline-flex w-1/2 mr-4">
+                <x-input-label for="FirstName" :value="__('FirstName')" />
+                <x-text-input id="FirstName" name="FirstName" type="text" class="mt-1 block w-full" :value="old('FirstName', $user->first_name)" required autofocus />
+                <x-input-error class="mt-2" :messages="$errors->get('FirstName')" />
+            </div>
+            <div class="inline-flex w-1/2">
+                <x-input-label for="LastName" :value="__('LastName')" />
+                <x-text-input id="LastName" name="LastName" type="text" class="mt-1 block w-full" :value="old('LastName', $user->last_name)" required autofocus />
+                <x-input-error class="mt-2" :messages="$errors->get('LastName')" />
+            </div>
+        </div> --}}
+        
         <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
