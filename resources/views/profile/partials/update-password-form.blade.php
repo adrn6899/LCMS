@@ -47,3 +47,4 @@
     </form>
     <script src="{{asset('js/update-password.js')}}"></script>
 </section>
+

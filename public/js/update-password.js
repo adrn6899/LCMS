@@ -3,8 +3,6 @@
 
     $(function(){
        $('#btn-update-pw').on('click', function(e){
-        // console.log("here");
-        // return;
         e.preventDefault();
         var form = $('#password-update');
 
@@ -13,7 +11,7 @@
         url: form.attr('action'),
         data: form.serialize(),
         success: function(response) {
-            toastRWithTime("success",'success');
+            toastRWithTime("Password changed successfully",'success');
             window.location.reload();
         },
         error: function(xhr, status, error) {

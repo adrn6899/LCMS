@@ -36,5 +36,15 @@
                 {{ $slot }}
             </main>
         </div>
+        {{-- <button id="dark-mode-toggle" class="fixed bottom-0 right-0 m-4 bg-white border rounded-md shadow-md p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 2a10 10 0 100-20 10 10 0 000 20z"/>
+                <path d="M10 0h1v20h-1V0z" />
+                <path d="M5.5 5.5L7 7l3.5 3.5 1-1L8 6.5 10.5 4l-1-1L7 5.5l-1.5-1zM15.5 15.5L17 17l3.5 3.5 1-1L18 16.5l2.5-2.5-1-1-2.5 2.5-2.5-2.5-1 1z"/>
+            </svg>
+        </button> --}}
+        <button id="dark-mode-toggle" class="fixed bottom-0 right-0 m-4 bg-white border rounded-md shadow-md p-2">
+            <span class="ml-2">Switch Theme</span>
+        </button>
     </body>
 </html>
