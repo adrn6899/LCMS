@@ -2,14 +2,15 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
-        "production": "mix --production"
+        "build": "cross-env NODE_ENV=production vite build",
+        "production": "npm run build"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.2",
         "alpinejs": "^3.4.2",
         "autoprefixer": "^10.4.2",
         "axios": "^1.1.2",
+        "cross-env": "^7.0.3",
         "laravel-mix": "^6.0.49",
         "laravel-vite-plugin": "^0.7.2",
         "lodash": "^4.17.19",
